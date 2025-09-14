@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>National Institute of Technology & Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+        }
+        
+        .top-section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(45deg, #6a11cb, #2575fc); 
+            padding: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .top-section h1 {
+            margin: 0;
+            font-size: 48px; 
+        }
+
+        .top-section h4 {
+            margin: 0 0 0 10px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            position: absolute;
+            right: 20px;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+       
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(90deg, #004e92, #000428);
+            padding: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 75px; 
+            width: 200px;
+        }
+
+        .text-container {
+            color: white;
+            text-align: left;
+        }
+
+        .text-container h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .text-container h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0 0 10px #ffcc00;
+        }
+
+        .hero {
+            background: linear-gradient(60deg, #29323c, #485563);
+            padding: 80px;
+            text-align: center;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .welcome-text {
+            position: relative;
+            padding: 80px;
+            color: white;
+            text-align: justify;
+        }
+
+        .welcome-text video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+
+        .welcome-text h1, .welcome-text p {
+            z-index: 1; 
+        }
+
+        .welcome-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-style: italic; 
+        }
+        
+        .down-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px; 
+            padding: 10px;
+            background-color: #fff; 
+        }
+
+        .down-logo img {
+            height: 80px;
+            max-width: 150px;
+            object-fit: contain;
+        }
+
+        /* Hero section specific styles */
+        .hero {
+            background: linear-gradient(60deg, #29323c, #485563);
+            padding: 50px;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+        }
+
+        .hero-text {
+            max-width: 500px;
+            text-align: left;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: #58f540;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .apply-button:hover {
+            background: #ff9900;
+            color: white;
+            box-shadow: 0 0 10px #ffcc00;
+        }
+
+        .explore-btn {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .explore-btn:hover {
+            color: #47f00a;
+            transform: scale(1.05);
+        }
+
+        .below-footer {
+            background-color: #0b1549;
+            color: #fff;
+            padding: 40px 60px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            width: 30%;
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .footer-left p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-right {
+            display: flex;
+            width: 65%;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            width: 30%;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .down-logo {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .down-logo img {
+                height: 60px;
+                max-width: 120px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-left,
+            .footer-right {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-right {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="top-section">
+        <h1>NITE</h1>
+        <h4>National Institute of Technology & Engineering</h4>
+        <div class="contact-info">
+            E-mail :<a href="mailto:info@nite.edu.lk">info@nite.edu.lk</a> &nbsp;&nbsp; T.P:<a href="tel:+94112804675">+94 11 2804 675</a>
+        </div>
+    </section>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Logo.jpg" alt="School Logo">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="lms.html">STUDENT LMS</a></li>
+                <li><a href="manage_students.php">STUDENT INFROMATION</a></li>
+                <li><a href="courses.html">COURSES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome-text">
+        <video autoplay muted loop>
+            <source src="bgv.mp4" type="video/mp4"> 
+            Your browser does not support the video tag.
+        </video>
+        
+        <p> 
+            <span style="font-family: 'Times New Roman', serif; font-size: 24px; font-weight: bold;">
+                W&nbsp;e&nbsp;l&nbsp;c&nbsp;o&nbsp;m&nbsp;e&nbsp;&nbsp;&nbsp; t &nbsp;o
+            </span>
+            <br>
+            <span style="font-size: 48px; font-weight: bold; font-family: 'Times New Roman', Times, serif; background-color: #58f540; padding: 5px;">N&nbsp;I&nbsp;T&nbsp;E</span><br>
+        </p>
+
+        <p>
+            <span style="font-family: 'Times New Roman', Times, serif;background-color: yellow; color: black;"><b>National Institute of Technology & Engineering is dedicated to empowering future<b></span> <br>
+            <span style="font-family: 'Times New Roman', Times, serif;background-color: yellow; color: black;"><b>innovators by fostering excellence in technology and engineering education. Through<b></span> <br>
+            <span style="font-family: 'Times New Roman', Times, serif;background-color: yellow; color: black;"><b>cutting-edge research, industry-aligned programs, and a commitment to innovation, we<b></span> <br>
+            <span style="font-family: 'Times New Roman', Times, serif;background-color: yellow; color: black;"><b>equip students with the knowledge and skills needed to lead in a rapidly evolving<b></span> <br>
+            <span style="font-family: 'Times New Roman', Times, serif;background-color: yellow; color: black;"><b>technological world.<b></span>
+        </p>
+    </section>
+
+    <section>
+        <div style="display: flex; justify-content: space-around; align-items: center; padding: 40px 0; background-color: #fff;">
+            <div style="text-align: center;">
+                <img src="icon-3.webp" alt="Government" style="width: 50px;">
+                <h3 style="color: #2d2d72; font-weight: bold;">Government</h3>
+                <p style="color: gray;">Recognition</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img src="icon-1.webp" alt="Student" style="width: 50px;">
+                <h3 style="color: #2d2d72; font-weight: bold;">Student</h3>
+                <p style="color: gray;">Activities</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img src="icon-2.webp" alt="Library" style="width: 50px;">
+                <h3 style="color: #2d2d72; font-weight: bold;">Library</h3>
+                <p style="color: gray;">Facilities</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img src="icon-4.webp" alt="Fascinating" style="width: 50px;">
+                <h3 style="color: #2d2d72; font-weight: bold;">Fascinating</h3>
+                <p style="color: gray;">Environment</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="new.png" alt="nite Campus">
+            </div>
+            
+            <div class="hero-text">
+                <h1>Study at NITE</h1>
+                <p>Apply for Courses at NITE</p>
+                <p>You can now directly enroll for any NITE course instantly by filling out an online admission form. 
+                   We will contact you for further information. Click on the following link to Register now!</p>
+                <a href="reg.html" class="apply-button">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-school" style="display: flex; height: 60vh; background-image: url('img.png'); background-size: cover; background-position: center; padding: 20px;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-right: 0px; padding-top:50px; padding-left:50px; background-color: rgba(0, 0, 150, 0.3);">
+            <img src="Logo.jpg" alt="Logo" style="width: 400px; height: 150px;">
+            <p style="font-size: 30px; font-weight: bold; color: #47f00a; margin-top: 20px; margin-left: 70px;">About Our School</p>
+        </div>
+
+        <div style="flex: 1; padding-left: 0px; padding-top: 30px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; color: white; background-color: rgba(0, 0, 150, 0.3);">
+            <p style="font-size: 18px; line-height: 1.5; max-width: 550px;">
+                The National Institute of Technology & Engineering (NITE) is committed to creating skilled and responsible graduates. We focus on building both technical knowledge and strong values like honesty, confidence, and professionalism.<br><br>
+
+                At NITE, students learn through practical experiences and are encouraged to think critically and work as a team. We aim to use technology to solve real-world problems and make a positive impact on society.
+            </p>
+        </div>
+    </section>
+
+    <section class="down-logo">
+        <img src="logo1.webp" alt="Logo 1">
+        <img src="logo2.webp" alt="Logo 2">
+        <img src="logo3.webp" alt="Logo 3">
+        <img src="logo4.webp" alt="Logo 4">
+        <img src="logo5.webp" alt="Logo 5">
+    </section>
+
+    <section class="below-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="Logo.jpg" alt="SICT Logo" class="footer-logo">
+                <p>National Institute of Technology & Engineering,<br>
+                    21/4, Queen Mary's Road, Gampaha,<br> Sri Lanka.</p>
+                <p>info@nite.edu.lk</p>
+                <p>+94 11 2804 675</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li>About NITE</li>
+                        <li>Vision & Mission</li>
+                        <li>Resource Panel</li>
+                        <li>Affiliations</li>
+                        <li>Scholarship</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Campus Life</h3>
+                    <ul>
+                        <li>Clubs & Societies</li>
+                        <li>Campus Tour</li>
+                        <li>Student Events</li>
+                        <li>Apply To NITE</li>
+                        <li>Downloads</li>
+                        <li>Login</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Academic</h3>
+                    <ul>
+                        <li>Undergraduate Programmes</li>
+                        <li>Diploma Programmes</li>
+                        <li>Advanced Certificate Programmes</li>
+                        <li>Certificate Programmes</li>
+                        <li>Research</li>
+                        <li>Student Handbook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NITE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

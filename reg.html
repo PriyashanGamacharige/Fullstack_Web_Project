@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    .navbar {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #004e92, #000428);
+      padding: 15px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 75px;
+      width: 200px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin-left: auto;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover {
+      background: #ffcc00;
+      color: #000;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    .container {
+      width: 70%;
+      padding: 30px;
+      background-color: #ffffffcc;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      margin: 30px auto;
+    }
+
+    .container:focus-within {
+      background-color: #f3f3ff;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+ footer {
+            background: linear-gradient(90deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-style: italic; 
+               }
+
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #5b86e5, #36d1dc);
+    }
+
+    button:active {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="navbar">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="Logo.jpg" alt="Logo"> 
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">BACK TO HOME</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Student Registration</h2>
+    <form action="register.php" method="POST">
+      <label for="nic">NIC</label>
+      <input type="text" id="nic" name="nic" required>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="tel">Tel. No</label>
+      <input type="tel" id="tel" name="tel" required>
+
+      <label for="course">Course</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select Course --</option>
+        <option value="ict">ICT</option>
+        <option value="engineering">Engineering</option>
+        <option value="business">Business</option>
+        <option value="arts">Arts</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+<footer>
+        <p><b>&copy; 2025 NITE. All Rights Reserved.</b></p>
+    </footer>
+
+</body>
+</html>
